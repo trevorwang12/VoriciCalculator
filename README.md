@@ -103,6 +103,8 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
 3. Access via: `https://yourusername.github.io/VoriciCalculator`
 
 ### Docker Production
+
+#### 本地开发环境
 ```bash
 # Production deployment
 docker-compose --profile production up -d
@@ -110,6 +112,33 @@ docker-compose --profile production up -d
 # With SSL/TLS (configure certificates first)
 docker-compose --profile production --profile ssl up -d
 ```
+
+#### 云端服务器部署
+```bash
+# 1. 克隆仓库
+git clone https://github.com/trevorwang12/VoriciCalculator.git
+cd VoriciCalculator
+
+# 2. 确保 Docker 服务运行
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# 3. 使用一键部署脚本
+./deploy.sh
+
+# 或者手动部署
+docker-compose -f docker-compose.prod.yml up -d --build
+```
+
+#### 部署要求
+- Docker 20.10+
+- Docker Compose 2.0+
+- 至少 512MB RAM
+- 开放端口 8080
+
+#### 部署后访问
+- 服务地址: `http://your-server-ip:8080`
+- 健康检查: `http://your-server-ip:8080`
 
 ### Manual Deployment
 Upload all files to any web server that serves static files.

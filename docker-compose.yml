@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   vorici-calculator:
     build: 
@@ -17,11 +15,11 @@ services:
     volumes:
       - nginx-logs:/var/log/nginx
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s
+      start_period: 20s
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.vorici-calculator.rule=Host(`vorici-calculator.local`)"
@@ -29,12 +27,6 @@ services:
       - "traefik.http.services.vorici-calculator.loadbalancer.server.port=80"
     security_opt:
       - no-new-privileges:true
-    read_only: true
-    tmpfs:
-      - /tmp
-      - /var/cache/nginx
-      - /var/run
-    user: "101:101"
 
   # Optional: Reverse proxy for production
   nginx-proxy:
