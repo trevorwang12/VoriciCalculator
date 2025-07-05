@@ -115,9 +115,14 @@ docker-compose --profile production --profile ssl up -d
 
 #### 云端服务器部署
 ```bash
-# 1. 克隆仓库
+# 1. 克隆仓库 (使用 main 分支)
 git clone https://github.com/trevorwang12/VoriciCalculator.git
 cd VoriciCalculator
+
+# 如果遇到分支问题，可以指定分支
+git clone -b main https://github.com/trevorwang12/VoriciCalculator.git
+# 或者克隆后切换分支
+git checkout main
 
 # 2. 确保 Docker 服务运行
 sudo systemctl start docker
@@ -188,6 +193,44 @@ This project is open source and available under the MIT License.
 ## Disclaimer
 
 This tool is for educational and convenience purposes. Path of Exile is a trademark of Grinding Gear Games. This calculator is not affiliated with or endorsed by Grinding Gear Games.
+
+## Troubleshooting
+
+### Common Issues
+
+#### "Branch Not Match" Error
+If you encounter a branch mismatch error:
+```bash
+# Try cloning with specific branch
+git clone -b main https://github.com/trevorwang12/VoriciCalculator.git
+
+# Or use master branch if your platform expects it
+git clone -b master https://github.com/trevorwang12/VoriciCalculator.git
+```
+
+#### Docker Issues
+```bash
+# Check if Docker is running
+sudo systemctl status docker
+
+# Start Docker service
+sudo systemctl start docker
+
+# Check Docker Compose version
+docker-compose --version
+
+# If using newer Docker, try
+docker compose version
+```
+
+#### Port Already in Use
+```bash
+# Check what's using port 8080
+sudo lsof -i :8080
+
+# Use different port
+sed -i 's/8080:80/8081:80/g' docker-compose.prod.yml
+```
 
 ## Support
 
