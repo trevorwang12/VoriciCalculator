@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vorici Calculator - Best Path of Exile Chromatic Orb Calculator Tool</title>
+    <meta name="description" content="Free Vorici Calculator for Path of Exile players. Calculate optimal chromatic orb strategies, socket coloring costs, and crafting probabilities. Best POE Vorici Chromatic Calculator online.">
+    <meta name="keywords" content="Vorici Calculator, Path of Exile, chromatic orb calculator, POE calculator, socket coloring, vorici chromatic calculator, path of exile tools">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="index.html" class="nav-link active">Calculator</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="disclaimer.html" class="nav-link">Disclaimer</a>
+        </nav>
+        
+        <h1>Vorici Calculator - Path of Exile Chromatic Orb Calculator</h1>
+        <p class="description">The ultimate Vorici Calculator tool for Path of Exile players. Calculate optimal chromatic orb strategies, socket coloring costs, and crafting probabilities with our advanced POE calculator.</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="totalSockets">Total Sockets:</label>
+                <input type="number" id="totalSockets" min="1" max="6" value="6">
+            </div>
+            
+            <div class="requirements-section">
+                <h3>Item Requirements</h3>
+                <div class="requirement-inputs">
+                    <div class="input-group red">
+                        <label for="strReq">Strength (Red):</label>
+                        <input type="number" id="strReq" min="0" value="0">
+                    </div>
+                    <div class="input-group green">
+                        <label for="dexReq">Dexterity (Green):</label>
+                        <input type="number" id="dexReq" min="0" value="0">
+                    </div>
+                    <div class="input-group blue">
+                        <label for="intReq">Intelligence (Blue):</label>
+                        <input type="number" id="intReq" min="0" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="desired-section">
+                <h3>Desired Socket Colors</h3>
+                <div class="desired-inputs">
+                    <div class="input-group red">
+                        <label for="redSockets">Red Sockets:</label>
+                        <input type="number" id="redSockets" min="0" max="6" value="0">
+                    </div>
+                    <div class="input-group green">
+                        <label for="greenSockets">Green Sockets:</label>
+                        <input type="number" id="greenSockets" min="0" max="6" value="0">
+                    </div>
+                    <div class="input-group blue">
+                        <label for="blueSockets">Blue Sockets:</label>
+                        <input type="number" id="blueSockets" min="0" max="6" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <button id="calculateBtn" class="calculate-btn">Calculate</button>
+        </div>
+        
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <h3>Results</h3>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Craft Type</th>
+                        <th>Average Cost</th>
+                        <th>Success Chance</th>
+                        <th>Average Attempts</th>
+                        <th>Cost per Try</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="info-section">
+            <h2>What is Vorici Calculator?</h2>
+            <p>The <strong>Vorici Calculator</strong> is an essential tool for Path of Exile players who want to optimize their chromatic orb usage for socket coloring. Our advanced <strong>Vorici Chromatic Calculator</strong> helps you determine the most cost-effective strategy to achieve your desired socket colors on gear.</p>
+            
+            <h3>How Does the Vorici Calculator Work?</h3>
+            <p>Our <strong>Path of Exile Vorici Calculator</strong> uses complex probability calculations based on your item's stat requirements (Strength, Dexterity, Intelligence) to determine socket color chances. The calculator considers:</p>
+            <ul>
+                <li><strong>Item Requirements:</strong> Higher stat requirements increase the probability of corresponding socket colors</li>
+                <li><strong>Socket Color Probabilities:</strong> Red sockets favor Strength, Green favor Dexterity, Blue favor Intelligence</li>
+                <li><strong>Crafting Methods:</strong> Different approaches like single chromatic orbs vs. bulk crafting</li>
+                <li><strong>Cost Optimization:</strong> Calculates the most economical method to achieve your desired colors</li>
+            </ul>
+            
+            <h3>Why Use a Vorici Calculator?</h3>
+            <p>The <strong>Vorici Calculator</strong> is crucial for Path of Exile players because:</p>
+            <ul>
+                <li><strong>Save Currency:</strong> Avoid wasting chromatic orbs on inefficient coloring attempts</li>
+                <li><strong>Optimize Builds:</strong> Plan your gear socket colors before investing in expensive items</li>
+                <li><strong>Strategic Planning:</strong> Compare different crafting methods to find the best approach</li>
+                <li><strong>Probability Analysis:</strong> Understand your chances of success before attempting crafts</li>
+            </ul>
+            
+            <h3>Chromatic Orb Mechanics in Path of Exile</h3>
+            <p>Chromatic orbs are currency items that reroll the colors of sockets on an item. The <strong>Vorici Calculator</strong> factors in the following mechanics:</p>
+            <ul>
+                <li><strong>Stat Requirements:</strong> Items with higher Strength requirements are more likely to roll red sockets</li>
+                <li><strong>Color Weighting:</strong> Socket colors are not equally weighted - they depend on item requirements</li>
+                <li><strong>Maximum Probability:</strong> There's a cap on how likely an off-color socket can be</li>
+                <li><strong>Crafting Bench:</strong> Different crafting methods have varying costs and success rates</li>
+            </ul>
+        </div>
+        
+        <div class="faq-section">
+            <h2>Frequently Asked Questions - Vorici Calculator</h2>
+            
+            <div class="faq-item">
+                <h4>What is the best Vorici Calculator for Path of Exile?</h4>
+                <p>Our <strong>Vorici Calculator</strong> is designed specifically for Path of Exile players, offering accurate probability calculations, multiple crafting method comparisons, and an intuitive interface. It's completely free and optimized for the latest POE mechanics.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>How accurate is the Vorici Chromatic Calculator?</h4>
+                <p>Our <strong>Vorici Calculator</strong> uses the exact probability formulas from Path of Exile's game mechanics. The calculations are based on the official socket coloring algorithms, ensuring highly accurate results for your chromatic orb planning.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Can I use the Vorici Calculator for all item types?</h4>
+                <p>Yes, the <strong>Vorici Calculator</strong> works for all socketed items in Path of Exile, including armor, weapons, and accessories. Simply enter the item's stat requirements and desired socket colors to get optimal crafting strategies.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>How do I save chromatic orbs using the Vorici Calculator?</h4>
+                <p>Use the <strong>Vorici Calculator</strong> before attempting any socket coloring. It will show you the most cost-effective method, whether it's single chromatic orbs, bulk crafting, or alternative approaches. This can save you hundreds of chromatic orbs on difficult color combinations.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>What's the difference between various crafting methods in the Vorici Calculator?</h4>
+                <p>The <strong>Vorici Calculator</strong> compares different methods: single chromatic orbs (cheapest per attempt), bulk crafting (better for difficult colors), and special bench crafts. Each method has different costs and success rates depending on your target colors.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>
